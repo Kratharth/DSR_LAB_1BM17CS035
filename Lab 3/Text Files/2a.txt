@@ -1,0 +1,14 @@
+#Export the data into a csv file after importing it and adding an additional column.
+
+setwd("D:/DSR Lab/DSR_LAB_1BM17CS035/Lab 3/CSV Files")
+data <- read.delim("indian_food_3.csv",sep=',')
+data
+
+summary(data)
+
+getwd()
+new_additional_data <- read.delim("indian_food_2.csv",sep=',')
+new_additional_data
+final_data <- cbind(data,new_additional_data$Price...kg)
+final_data
+write.csv(final_data,"output.csv",sep="/t",row.names = FALSE)
