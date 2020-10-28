@@ -1,0 +1,9 @@
+# To create a data frame of 3 columns empid,salary and marital status(bachelor,married) of 10 values for each column. Draw a boxplot of salary column for different categories of status
+
+install.packages("ggplot2")
+library("ggplot2")
+empid <- c(1,2,3,4,5,6,7,8,9,10)
+salary <- c(1000,5000,3000,15000,7000,4800,7900,3200,2100,500)
+status <- c("Married","Bachelor","Bachelor","Married","Married","Bachelor","Married","Married","Bachelor","Bachelor")
+person <- data.frame(empid,salary,status)
+boxplot(salary~status,data=person,xlab="Marital Status",ylab="Salary",col="gray90")
