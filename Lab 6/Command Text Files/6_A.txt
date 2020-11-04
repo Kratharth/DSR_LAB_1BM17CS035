@@ -1,0 +1,4 @@
+library("gcookbook")
+cab <- cabbage_exp
+barplot(Weight ~ Cultivar+Date,beside=TRUE,xlab="Date",ylab="Weight",data=cab,legend=TRUE,col = c("Red","Green"))
+
